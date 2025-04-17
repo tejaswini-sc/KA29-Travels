@@ -1,0 +1,575 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== Navigation Bar ===== */
+.navbar {
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: Black;
+  z-index: 10;
+}
+
+.nav-left .logo {
+  width: 150px; /* Adjust this width according to your logo's size */
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff6600;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('images/hero.jpg'); /* Set your hero image */
+  background-size: cover;
+  background-position: center;
+  padding-top: 70px;  /* Prevent overlap with navbar */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-overlay h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.hero-overlay p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #ff6600;
+  color: white;
+  padding: 12px 26px;
+  font-size: 1em;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e65700;
+}
+
+/* ===== Services Section ===== */
+#services {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#services h2 {
+  font-size: 2.2em;
+  margin-bottom: 40px;
+}
+
+.service-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.service-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.service-box h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.service-box p {
+  font-size: 1.1em;
+}
+
+/* ===== Our Cars Section ===== */
+#cars {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#cars h2 {
+  font-size: 2.2em;
+  margin-bottom: 40px;
+}
+
+#cars .car-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+#cars .car-card {
+  flex: 1 1 calc(33.33% - 40px); /* 3 cards per row with gap */
+  max-width: 300px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding-bottom: 35px;
+  transition: transform 0.3s ease;
+}
+
+#cars .car-card:hover {
+  transform: translateY(-10px);
+}
+
+#cars .car-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 3px solid #ff6600;
+}
+
+#cars .car-card h3 {
+  font-size: 1.4em;
+  margin: 15px 0 25px;
+}
+
+#cars .car-card p {
+  font-size: 1em;
+  padding: 0 10px;
+}
+
+/* Button inside image */
+#cars .enquiry-btn {
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 0.95em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Tour Packages Section ===== */
+#tour-packages {
+  padding: 60px 20px;
+  background: #f4f8fa;
+  text-align: center;
+}
+
+#tour-packages h2 {
+  font-size: 2.2em;
+  margin-bottom: 40px;
+}
+
+.tour-packages {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.package-card {
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+  transform: scale(1.03);
+}
+
+.package-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.package-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.package-info h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.package-info p {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.details-btn {
+  background: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.details-btn:hover {
+  background: #e65700;
+}
+
+.package-details {
+  display: none;
+  margin-top: 10px;
+  text-align: left;
+  font-size: 0.95em;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .tour-packages {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .package-card {
+    width: 90%;
+  }
+}
+
+.call-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.call-btn:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+
+.call-btn:active {
+  background-color: #004085;
+}
+
+/* Make Call Button Responsive */
+@media (max-width: 600px) {
+  .call-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/*about us*/
+.about-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.about-section .container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.about-section .tagline {
+  font-size: 20px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.floating-buttons {
+  position: fixed;
+  right: 20px; /* Position the buttons 20px from the left edge */
+  bottom: 20px; /* Position the buttons 20px from the bottom edge */
+  z-index: 1000; /* Make sure it's on top of other elements */
+  display: flex;
+  flex-direction: column; /* Stack the buttons vertically */
+  gap: 10px; /* Add space between buttons */
+}
+
+.call-btns, .whatsapp-btn {
+  background-color: #25d366; /* WhatsApp Green Color */
+  color: white;
+  font-size: 30px;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  text-decoration: none; /* Remove underline */
+}
+
+.call-btns {
+  background-color: #007bff; /* Blue color for call button */
+}
+
+.call-btns:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+.whatsapp-btn:hover {
+  background-color: #128c7e; /* Darker green for WhatsApp on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+/* Make the buttons a bit bigger on hover */
+.call-btns:hover, .whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+/*contact*/
+/* Contact Section */
+.contact-section {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 260px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.contact-info a {
+  color: #ff5722;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ddd;
+  padding: 8px;
+  transition: transform 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.map-container {
+  flex: 1;
+  min-width: 260px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info, .map-container {
+    margin-bottom: 20px;
+  }
+
+  .map-container iframe {
+    height: 250px;
+  }
+}
+
+
+
+/* ===== Footer ===== */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+footer p {
+  font-size: 1em;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .service-boxes {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .car-gallery,
+  .tour-packages {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .car-card,
+  .package-card,
+  .service-box {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-overlay p {
+    font-size: 1.1em;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+
+  #contact form input,
+  #contact form textarea {
+    padding: 12px;
+    font-size: 1em;
+  }
+
+  #contact form button {
+    padding: 12px 25px;
+  }
+}
